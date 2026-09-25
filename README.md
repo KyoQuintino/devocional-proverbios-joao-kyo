@@ -5,6 +5,7 @@ Landing page responsiva, em português, para o e-book **Devocional Diário em Pr
 ## Conteúdo do repositório
 
 - Aplicação React + Vite + TypeScript e seus arquivos de configuração.
+- PDF-fonte de 97 páginas do e-book, em `assets/ebook-source/`.
 - Integração do widget oficial Hotmart com o checkout `V107767990Y`.
 - Artes originais geradas para capa, hero da página e divulgação.
 - Versões JPEG otimizadas usadas como mídia promocional.
