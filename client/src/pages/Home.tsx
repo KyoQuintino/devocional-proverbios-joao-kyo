@@ -1,7 +1,8 @@
 import "./home.css";
+import { useEffect } from "react";
 import { ArrowDown, ArrowRight, ArrowUpRight, BookOpen, Check, ChevronDown, FileText, Heart, Leaf, ShieldCheck, Sparkles } from "lucide-react";
 
-const CHECKOUT_URL = import.meta.env.VITE_HOTMART_CHECKOUT_URL?.trim() ?? "";
+const CHECKOUT_URL = "https://pay.hotmart.com/V107767990Y?checkoutMode=2";
 const coverImage = "/manus-storage/devocional-proverbios-capa-optimized_e770f064.jpg";
 const promoImage = "/manus-storage/devocional-proverbios-hotmart-promo-optimized_9ff41b84.jpg";
 const heroImage = "/manus-storage/devocional-proverbios-hero-optimized_18bf3c92.jpg";
@@ -44,6 +45,27 @@ function ActionLink({ children, secondary = false }: { children: React.ReactNode
 }
 
 export default function Home() {
+  useEffect(() => {
+    const stylesheetId = "hotmart-checkout-widget-styles";
+    if (!document.getElementById(stylesheetId)) {
+      const stylesheet = document.createElement("link");
+      stylesheet.id = stylesheetId;
+      stylesheet.rel = "stylesheet";
+      stylesheet.type = "text/css";
+      stylesheet.href = "https://static.hotmart.com/css/hotmart-fb.min.css";
+      document.head.appendChild(stylesheet);
+    }
+
+    const scriptId = "hotmart-checkout-widget-script";
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.type = "text/javascript";
+      script.src = "https://static.hotmart.com/checkout/widget.min.js";
+      document.head.appendChild(script);
+    }
+  }, []);
+
   return (
     <main>
       <header className="site-header">
@@ -152,12 +174,14 @@ export default function Home() {
             <h2>Comece sua jornada<br /><em>pela sabedoria de Provérbios.</em></h2>
             <p>Um material digital para ler com calma, refletir e revisitar sempre que fizer sentido para você.</p>
             <div className="offer-meta"><span><FileText size={16} aria-hidden="true" /> PDF digital</span><span><BookOpen size={16} aria-hidden="true" /> 97 páginas</span><span><ShieldCheck size={16} aria-hidden="true" /> Acesso pela Hotmart</span></div>
-            {CHECKOUT_URL ? (
-              <a className="button button--gold button--large" href={CHECKOUT_URL} target="_blank" rel="noreferrer">Quero ler o e-book <ArrowRight size={18} aria-hidden="true" /></a>
-            ) : (
-              <a className="button button--gold button--large" href="#checkout-note">Quero ler o e-book <ArrowRight size={18} aria-hidden="true" /></a>
-            )}
-            {!CHECKOUT_URL && <p className="checkout-note" id="checkout-note">Link do checkout Hotmart a inserir antes de publicar a página.</p>}
+            <a
+              className="hotmart-fb hotmart__button-checkout hotmart-checkout-cta"
+              href={CHECKOUT_URL}
+              onClick={(event) => event.preventDefault()}
+              aria-label="Comprar o e-book na Hotmart"
+            >
+              <img src="https://static.hotmart.com/img/btn-buy-green.png" alt="Comprar com segurança pela Hotmart" />
+            </a>
           </div>
           <div className="offer-card__visual"><img src={coverImage} alt="Capa do Devocional Diário em Provérbios" loading="lazy" /></div>
           <div className="offer-card__ornament" aria-hidden="true"><Leaf size={125} strokeWidth={0.55} /></div>

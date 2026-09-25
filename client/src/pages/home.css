@@ -120,7 +120,11 @@ a { color: inherit; }
 .offer-card__visual { width: 190px; justify-self: center; transform: rotate(2deg); }
 .offer-card__visual img { display: block; width: 100%; box-shadow: 0 16px 35px rgba(0,0,0,.42), 5px 2px 0 #344136; }
 .offer-card__ornament { position: absolute; right: 20%; bottom: -35px; color: rgba(201,176,121,.1); transform: rotate(-24deg); }
-.checkout-note { color: rgba(247,241,228,.67); font-size: .65rem; margin: .85rem 0 0; }
+.hotmart-checkout-cta { display: inline-flex; min-height: 54px; align-items: center; justify-content: center; border-radius: 3px; transition: transform .18s cubic-bezier(.23,1,.32,1), filter .18s ease; }
+.hotmart-checkout-cta:hover { transform: translateY(-2px); filter: brightness(1.04); }
+.hotmart-checkout-cta:active { transform: scale(.98); }
+.hotmart-checkout-cta:focus-visible { outline: 3px solid #c29f5c; outline-offset: 4px; }
+.hotmart-checkout-cta img { display: block; width: auto; max-width: min(100%, 280px); height: auto; }
 
 .faq-section { display: grid; grid-template-columns: minmax(250px, .8fr) minmax(0, 1.2fr); gap: clamp(3rem, 10vw, 9rem); background: var(--paper-light); }
 .faq-heading h2 { font-size: clamp(2rem, 3.5vw, 3.15rem); }
@@ -179,6 +183,7 @@ a { color: inherit; }
   .offer-card__ornament { right: -10px; bottom: -20px; }
   .offer-meta { gap: .75rem 1rem; }
   .offer-card .button { width: 100%; }
+  .offer-card .hotmart-checkout-cta { width: fit-content; max-width: 100%; }
   .faq-section { gap: 2rem; }
   .faq-item summary { font-size: .96rem; }
   .site-footer { display: grid; grid-template-columns: 1fr auto; gap: .85rem .5rem; padding: 1.5rem 1.35rem; }
