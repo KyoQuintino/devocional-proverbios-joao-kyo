@@ -37,7 +37,7 @@ const questions = [
 
 function ActionLink({ children, secondary = false }: { children: React.ReactNode; secondary?: boolean }) {
   return (
-    <a className={secondary ? "button button--light" : "button button--gold"} href="#oferta">
+    <a className={secondary ? "button button--light" : "button button--gold"} href={CHECKOUT_URL}>
       {children}
       <ArrowRight aria-hidden="true" size={17} />
     </a>
@@ -78,7 +78,7 @@ export default function Home() {
           <a href="#conteudo">O que você encontra</a>
           <a href="#duvidas">Dúvidas</a>
         </nav>
-        <a className="header-cta" href="#oferta">Conheça o e-book <ArrowUpRight size={15} aria-hidden="true" /></a>
+        <a className="header-cta" href={CHECKOUT_URL}>Conheça o e-book <ArrowUpRight size={15} aria-hidden="true" /></a>
       </header>
 
       <section className="hero" id="inicio" style={{ backgroundImage: `linear-gradient(90deg, rgba(17, 27, 22, .98) 0%, rgba(17, 27, 22, .91) 39%, rgba(17, 27, 22, .54) 70%, rgba(17, 27, 22, .18) 100%), url(${heroImage})` }}>
