@@ -78,7 +78,7 @@ export default function Home() {
           <a href="#conteudo">O que você encontra</a>
           <a href="#duvidas">Dúvidas</a>
         </nav>
-        <a className="header-cta" href={CHECKOUT_URL}>Conheça o e-book <ArrowUpRight size={15} aria-hidden="true" /></a>
+        <a className="header-cta" href={CHECKOUT_URL}>Comprar agora <ArrowUpRight size={15} aria-hidden="true" /></a>
       </header>
 
       <section className="hero" id="inicio" style={{ backgroundImage: `linear-gradient(90deg, rgba(17, 27, 22, .98) 0%, rgba(17, 27, 22, .91) 39%, rgba(17, 27, 22, .54) 70%, rgba(17, 27, 22, .18) 100%), url(${heroImage})` }}>
@@ -93,7 +93,7 @@ export default function Home() {
             <span><Heart size={17} aria-hidden="true" /> Reflexões e orações</span>
           </div>
           <div className="hero__actions">
-            <ActionLink>Descubra a jornada</ActionLink>
+            <ActionLink>Comprar agora</ActionLink>
             <a className="text-link text-link--light" href="#conteudo">Veja o que inclui <ArrowDown size={15} aria-hidden="true" /></a>
           </div>
           <p className="hero__byline">Por Henrietta Mitchell <span>·</span> Bíblia em Arte</p>
@@ -163,7 +163,7 @@ export default function Home() {
             <li><Check size={17} aria-hidden="true" /> Temas organizados em 31 capítulos</li>
             <li><Check size={17} aria-hidden="true" /> Reflexões, aplicações e orações</li>
           </ul>
-          <ActionLink secondary>Ver detalhes do e-book</ActionLink>
+          <ActionLink secondary>Comprar agora</ActionLink>
         </div>
       </section>
 
