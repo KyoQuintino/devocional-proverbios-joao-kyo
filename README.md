@@ -37,4 +37,4 @@ O site carrega estes recursos oficiais no cliente:
 - `https://static.hotmart.com/css/hotmart-fb.min.css`
 - Imagem oficial do botão verde de compra
 
-O botão do widget aponta para `https://pay.hotmart.com/V107767990Y?checkoutMode=2`. Confirme o produto, preço, país e idioma no painel da Hotmart antes de divulgar a página. Não incluí credenciais ou informações de pagamento neste repositório.
+O botão do widget aponta para `https://pay.hotmart.com/V107767990Y`. Confirme o produto, preço, país e idioma no painel da Hotmart antes de divulgar a página. Não incluí credenciais ou informações de pagamento neste repositório.
