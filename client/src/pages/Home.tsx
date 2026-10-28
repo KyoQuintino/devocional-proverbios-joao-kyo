@@ -2,7 +2,7 @@ import "./home.css";
 import { useEffect } from "react";
 import { ArrowDown, ArrowRight, ArrowUpRight, BookOpen, Check, ChevronDown, FileText, Heart, Leaf, ShieldCheck, Sparkles } from "lucide-react";
 
-const CHECKOUT_URL = "https://pay.hotmart.com/V107767990Y?checkoutMode=2";
+const CHECKOUT_URL = "https://pay.hotmart.com/V107767990Y";
 const coverImage = "/manus-storage/devocional-proverbios-capa-optimized_e770f064.jpg";
 const promoImage = "/manus-storage/devocional-proverbios-hotmart-promo-optimized_9ff41b84.jpg";
 const heroImage = "/manus-storage/devocional-proverbios-hero-optimized_18bf3c92.jpg";
